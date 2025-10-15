@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ติดต่อสอบถาม — AI EMPOWER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ======= Galaxy Aurora Theme ======= */
+    :root {
+      --bg1:#05060b; --bg2:#0b1230;
+      --violet:#8b5cf6; --indigo:#4f46e5; --cyan:#22d3ee;
+      --ink:#e8f2ff; --muted:#98a4c7;
+      --glass:rgba(255,255,255,.08); --line:rgba(255,255,255,.15);
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:"TH Sarabun New",system-ui;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(139,92,246,.28), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(34,211,238,.22), transparent 60%),
+        radial-gradient(800px 500px at 50% 120%, rgba(79,70,229,.22), transparent 60%),
+        linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%);
+      min-height:100vh; overflow-x:hidden; text-align:center;
+      animation:bgMove 20s ease-in-out infinite alternate;
+    }
+    @keyframes bgMove{
+      0%{background-position:0 0,50px 50px,100px 100px,0 0;}
+      100%{background-position:100px 50px,150px 100px,200px 150px,0 0;}
+    }
+
+    /* ดาวระยิบ */
+    body::before{
+      content:""; position:fixed; inset:0; z-index:-1;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, white 40%, transparent),
+        radial-gradient(1px 1px at 70% 60%, white 40%, transparent),
+        radial-gradient(1px 1px at 50% 80%, white 40%, transparent),
+        radial-gradient(1px 1px at 10% 50%, white 40%, transparent);
+      opacity:.5; animation:twinkle 8s linear infinite;
+    }
+    @keyframes twinkle{0%,100%{opacity:.3}50%{opacity:1}}
+
+    header{padding:40px 16px 10px;}
+    header h1{
+      margin:0;
+      font-size:clamp(28px,5vw,52px);
+      background:linear-gradient(90deg,var(--violet),var(--indigo),var(--cyan));
+      -webkit-background-clip:text; color:transparent;
+      text-shadow:0 0 18px rgba(139,92,246,.45),0 0 28px rgba(34,211,238,.35);
+      animation:glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow{
+      from{text-shadow:0 0 10px rgba(139,92,246,.4),0 0 20px rgba(34,211,238,.4);}
+      to{text-shadow:0 0 30px rgba(139,92,246,.6),0 0 40px rgba(34,211,238,.6);}
+    }
+
+    nav{
+      text-align:center; background:var(--glass);
+      padding:12px; backdrop-filter:blur(8px);
+      box-shadow:0 4px 14px rgba(0,0,0,.4);
+    }
+    nav a{
+      color:#fff; margin:0 10px; text-decoration:none; font-weight:bold;
+      padding:8px 12px; border-radius:8px; transition:.25s;
+    }
+    nav a:hover{
+      background:linear-gradient(90deg,rgba(139,92,246,.22),rgba(34,211,238,.22));
+      box-shadow:0 0 12px rgba(34,211,238,.45);
+      transform:translateY(-2px);
+    }
+    nav .active{
+      background:linear-gradient(90deg,rgba(139,92,246,.30),rgba(34,211,238,.30));
+      box-shadow:inset 0 0 14px rgba(139,92,246,.4);
+    }
+
+    /* การ์ดติดต่อ */
+    .contact-container{
+      display:flex; flex-wrap:wrap; justify-content:center; gap:30px;
+      padding:40px 20px;
+    }
+    .card{
+      position:relative;
+      width:320px; padding:30px 30px 40px;
+      background:var(--glass);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.45);
+      backdrop-filter:blur(12px);
+      text-align:left; transition:all .35s;
+    }
+    .card:hover{
+      transform:translateY(-8px) scale(1.03);
+      box-shadow:0 0 25px rgba(34,211,238,.4);
+      border-color:rgba(34,211,238,.5);
+    }
+
+    .icon{
+      font-size:2.5rem;
+      background:linear-gradient(135deg,var(--violet),var(--cyan));
+      -webkit-background-clip:text; color:transparent;
+      text-shadow:0 0 20px rgba(139,92,246,.5);
+    }
+    .card p{font-size:1.2rem;color:var(--ink);margin:8px 0;}
+    .card strong{color:#fff;text-shadow:0 0 10px rgba(34,211,238,.5);}
+
+    footer{
+      color:var(--muted); padding:20px; margin-top:20px;
+      font-size:1rem;
+    }
+
+    #current-time{color:var(--muted);margin-top:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ติดต่อสอบถามโครงการอบรม AI EMPOWER</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">หน้าหลัก</a> |
+    <a href="schedule.html">กำหนดการ</a> |
+    <a href="registration.html">ลงทะเบียน</a> |
+    <a href="payment.html">แจ้งชำระเงิน</a> |
+    <a href="contact.html" class="active">ติดต่อ</a>
+  </nav>
+
+  <section class="contact-container">
+    <div class="card">
+      <div class="icon">📞</div>
+      <p><strong>โทรศัพท์:</strong> 1705 หรือ 2921</p>
+      <p><strong>เวลาทำการ:</strong> จันทร์–ศุกร์ 08.30–16.30 น.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📧</div>
+      <p><strong>อีเมล:</strong> cru-it@chandra.com</p>
+      <p><strong>เว็บไซต์:</strong> <a href="#" style="color:#22d3ee;">www.chandra.ac.th</a></p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📍</div>
+      <p><strong>ที่อยู่:</strong><br>
+         สำนักวิทยบริการและเทคโนโลยีสารสนเทศ<br>
+         มหาวิทยาลัยราชภัฏจันทรเกษม</p>
+    </div>
+  </section>
+
+  <p id="current-time"></p>
+
+  <footer>
+    © 2568 สำนักวิทยบริการและเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏจันทรเกษม
+  </footer>
+
+  <script>
+    // แสดงเวลาปัจจุบันแบบเรียลไทม์
+    function showTime() {
+      const now = new Date();
+      document.getElementById("current-time").innerHTML =
+        "เวลาปัจจุบัน: " + now.toLocaleString("th-TH");
+    }
+    showTime();
+    setInterval(showTime, 60000);
+  </script>
+</body>
+</html>

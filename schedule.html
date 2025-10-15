@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>กำหนดการอบรม — Generative AI for Educator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ===== Galaxy Aurora (Purple/Blue/Cyan/Black) ===== */
+    :root{
+      --bg1:#05060b; --bg2:#0b1230;
+      --glass:rgba(255,255,255,.08); --line:rgba(255,255,255,.14);
+      --ink:#e8f2ff; --muted:#98a4c7;
+      --violet:#8b5cf6; --indigo:#4f46e5; --cyan:#22d3ee;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--ink);
+      font-family:"TH Sarabun New",system-ui,Segoe UI,Arial,sans-serif;
+      text-align:center;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(139,92,246,.28), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(34,211,238,.22), transparent 60%),
+        radial-gradient(800px 500px at 50% 120%, rgba(79,70,229,.22), transparent 60%),
+        linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+      min-height:100vh; overflow-x:hidden;
+    }
+    /* ดาวกะพริบ */
+    body::before{
+      content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 52%),
+        radial-gradient(1px 1px at 78% 25%, #fff 50%, transparent 52%),
+        radial-gradient(1px 1px at 32% 72%, #fff 50%, transparent 52%),
+        radial-gradient(1px 1px at 64% 84%, #fff 50%, transparent 52%),
+        radial-gradient(1px 1px at 92% 58%, #fff 50%, transparent 52%);
+      opacity:.45; animation:twinkle 10s linear infinite;
+    }
+    @keyframes twinkle{0%,100%{opacity:.3}50%{opacity:.95}}
+
+    header{ padding:40px 16px 18px }
+    header h1{
+      margin:0; font-size:clamp(28px,5vw,54px);
+      background:linear-gradient(90deg,var(--violet),var(--indigo),var(--cyan));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 0 18px rgba(139,92,246,.45), 0 0 28px rgba(34,211,238,.35);
+    }
+    .subtitle{margin-top:6px;color:var(--muted);font-size:clamp(16px,2.2vw,22px)}
+
+    nav{
+      position:sticky; top:0; z-index:9;
+      background:var(--glass); backdrop-filter:blur(10px);
+      padding:10px 12px; box-shadow:0 8px 18px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06)
+    }
+    nav a{
+      display:inline-block; color:#fff; text-decoration:none; font-weight:700;
+      padding:10px 14px; margin:0 4px; border-radius:10px;
+      transition:background .2s, box-shadow .2s, transform .15s;
+    }
+    nav a:hover{
+      background:linear-gradient(90deg, rgba(139,92,246,.22), rgba(34,211,238,.22));
+      box-shadow:0 0 12px rgba(139,92,246,.45); transform:translateY(-1px);
+    }
+    nav .active{
+      background:linear-gradient(90deg, rgba(139,92,246,.30), rgba(34,211,238,.30));
+      box-shadow:inset 0 0 16px rgba(139,92,246,.4);
+    }
+
+    main{max-width:1100px;margin:26px auto;padding:0 16px}
+    .card{
+      margin:0 auto 18px; padding:22px 20px; border-radius:18px;
+      background:var(--glass); border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+      text-align:left; backdrop-filter:blur(10px);
+    }
+
+    table{
+      width:100%; border-collapse:collapse; overflow:hidden; border-radius:16px;
+      background:rgba(255,255,255,.06);
+      box-shadow:0 10px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+    }
+    caption{padding:12px 14px; color:#fff; font-weight:700; text-align:left}
+    th,td{padding:12px 14px; border-bottom:1px solid rgba(255,255,255,.12); text-align:left}
+    th{
+      background:linear-gradient(90deg, rgba(79,70,229,.40), rgba(34,211,238,.40));
+      color:#fff; text-shadow:0 0 10px rgba(34,211,238,.5);
+    }
+    tbody tr:hover{background:rgba(34,211,238,.10)}
+    .time{white-space:nowrap; width:210px}
+
+    footer{text-align:center;color:var(--muted);padding:20px 16px;margin-top:26px}
+
+    @media (max-width:720px){ .time{width:auto;white-space:normal} .card{padding:18px 14px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Generative AI for Educator</h1>
+    <p class="subtitle">วันพุธที่ 15 ตุลาคม 2568 • ห้องปฏิบัติการคอมพิวเตอร์ อาคาร 29</p>
+  </header>
+
+  <nav>
+    <a href="index.html">หน้าหลัก</a> |
+    <a href="schedule.html" class="active">กำหนดการ</a> |
+    <a href="registration.html">ลงทะเบียน</a> |
+    <a href="payment.html">แจ้งชำระเงิน</a> |
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+
+  <main>
+    <section class="card">
+      <p><strong>ผู้จัด:</strong> สำนักวิทยบริการและเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏจันทรเกษม</p>
+      <p><strong>วิทยากร:</strong> รองศาสตราจารย์ ดร.วีระ เหมือนสิน • คณะวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</p>
+    </section>
+
+    <section class="card">
+      <table aria-describedby="note">
+        <caption>ตารางเวลาและหัวข้ออบรม</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="time">เวลา</th>
+            <th scope="col">รายละเอียดกิจกรรม</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">08.30 – 09.00 น.</td>
+            <td>ลงทะเบียน / พิธีเปิด</td>
+          </tr>
+          <tr>
+            <td class="time">09.00 – 10.30 น.</td>
+            <td>
+              หลักการพื้นฐานของปัญญาประดิษฐ์รังสรรค์ (Generative AI)<br/>
+              การประยุกต์ใช้ AI ในการเรียนการสอนและการวิจัย
+            </td>
+          </tr>
+          <tr>
+            <td class="time">10.30 – 10.45 น.</td>
+            <td>พักรับประทานอาหารว่าง</td>
+          </tr>
+          <tr>
+            <td class="time">10.45 – 12.00 น.</td>
+            <td>ต่อเนื่อง: แนวทางและกรณีศึกษาในการประยุกต์ใช้ AI</td>
+          </tr>
+          <tr>
+            <td class="time">12.00 – 13.00 น.</td>
+            <td>พักรับประทานอาหารกลางวัน</td>
+          </tr>
+          <tr>
+            <td class="time">13.00 – 14.30 น.</td>
+            <td>
+              การประยุกต์ใช้ AI ในการเรียนการสอนและการวิจัย (ต่อ)<br/>
+              เครื่องมือและทรัพยากร AI สำหรับผู้สอน
+            </td>
+          </tr>
+          <tr>
+            <td class="time">14.30 – 14.45 น.</td>
+            <td>พักรับประทานอาหารว่าง</td>
+          </tr>
+          <tr>
+            <td class="time">14.45 – 16.00 น.</td>
+            <td>สรุป/แลกเปลี่ยนเรียนรู้ และตอบคำถาม</td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="note" style="margin-top:10px;color:var(--muted)">
+        หมายเหตุ: แนะนำให้นำ Notebook มาด้วย และกำหนดการอาจเปลี่ยนแปลงตามความเหมาะสม
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2568 เว็บไซต์ตัวอย่างเพื่อการศึกษา</footer>
+</body>
+</html>
